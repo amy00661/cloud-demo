@@ -5,5 +5,5 @@ spring:
     name: eurekaserver # eureka的服务名称
 eureka:
   client:
-    service-url:  # eureka的地址信息
+    service-url:  # eureka的地址信息，eureka也需要將自己註冊上去，以後多台eureka可以互相備援
       defaultZone: http://127.0.0.1:10086/eureka
