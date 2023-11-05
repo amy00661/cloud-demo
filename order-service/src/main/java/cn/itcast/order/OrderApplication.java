@@ -19,8 +19,12 @@ public class OrderApplication {
      * 創建RestTemplate並注入Spring容器
      */
     @Bean
-    @LoadBalanced
+    @LoadBalanced   // 標註這個RestTemplate的請求，都要被Ribbon處理了
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
+    /*@Bean
+    public IRule randomRule() {
+        return new RandomRule();
+    }*/
 }
