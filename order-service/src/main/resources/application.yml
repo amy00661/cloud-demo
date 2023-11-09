@@ -24,8 +24,8 @@ eureka:
 userservice:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule # 負載均衡規則
-#feign:
-#  client:
-#    config:
-#      default:
-#        logger-level: FULL
+feign:
+  client:
+    config:
+      default:
+        logger-level: FULL
