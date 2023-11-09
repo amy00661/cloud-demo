@@ -27,5 +27,9 @@ userservice:
 feign:
   client:
     config:
-      default:
-        logger-level: FULL
+      default: # default全局的配置
+        loggerLevel: BASIC # 日誌級別，BASIC就是基本的請求和響應信息
+  httpclient:
+    enabled: true # 開啓feign對HttpClient的支持
+    max-connections: 200 # 最大的連接數
+    max-connections-per-route: 50 # 每個路徑的最大連接數
